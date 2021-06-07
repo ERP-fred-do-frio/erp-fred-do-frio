@@ -1,0 +1,171 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body{
+    background-image: url(../img/back2.jpg);
+}
+.cabecalho{
+    height: 55px;
+    padding-left: 65px;
+    padding-right: 20px; 
+    background-color: rgb(7, 135, 255);
+}
+.logo{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    position: absolute;
+    top: 10px;
+    border-bottom: 10px;
+    left: 97%;
+    float: right;
+    background: url(../img/Logo.png);
+    font-size: 0;
+}
+.cabecalho form{
+    width: 30%;
+    float: right;
+}
+.cabecalho input[type="text"]{
+    background-color: rgb(131, 131, 248);
+    border: none;
+    border-bottom: 1px solid red;
+    width: 250px;
+    height: 30px;
+    position: absolute;
+    top: 10px;
+    right: 89px;
+    float: left;
+    padding: 15px 10px;
+}
+.cabecalho button{
+    width: 40px;
+    height: 30px;
+    position: absolute;
+    right: 50px;
+    top: 10px;
+    float: right;
+    padding: 15px 10px;
+    background-color: yellowgreen;
+    border: none;
+    border-bottom: 1px solid red;
+    color: white;
+    cursor: pointer;
+}
+.btnAbre{
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.btnAbre span{
+    font-size: 35px;
+}
+.btnFecha{
+    position: relative;
+    left: 20px;
+    top: 3px;
+    border: 1px solid white;
+    border-radius: 3px;
+    cursor: pointer;
+}
+.btnFecha:hover{
+    border: 1px solid red;
+}
+.menuLateral{
+    background-color: rgb(7, 135, 255);
+    width: 250px;
+    height: 100%;
+    left: -250px;
+    position: absolute;
+    transition: left 0.5s;
+}
+.menuLateral.mostra{
+    left: 0;
+}
+.menuLateral .titulo{
+    height: 55px;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    line-height: 45px;
+    font-size: 24px;
+    border-bottom: 2px solid rgb(255, 0, 0);
+}
+.menuLateral ul{
+    list-style: none;
+}
+.menuLateral ul li{
+    line-height: 40px;
+    border: 1px solid rgb(2, 160, 252);
+}
+.menuLateral ul li a{
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    padding-left: 40px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    box-sizing: border-box;
+    font-weight: bold;
+    display: block;
+}
+.menuLateral ul li a:hover{
+    background-color: rgb(141, 128, 128);
+    text-shadow: 3px 3px 5px black;
+    transition: 0.5s;
+}
+.menuLateral ul ul li a{
+    font-size: 16px;
+    font-weight: 300;
+    padding-left: 60px;
+    background-color: rgb(187, 184, 184);
+    color: rgb(2, 31, 58);
+}
+.menuLateral ul ul{
+    display: none;
+}
+.menuLateral ul .itensCadastro.mostra{
+    display: block;
+}
+.menuLateral ul .itensEstoque.mostra{
+    display: block;
+}
+.menuLateral ul .itensVendas.mostra{
+    display: block;
+}
+.menuLateral ul .itensFinanceiros.mostra{
+    display: block;
+}
+.menuLateral ul .itensRelatorios.mostra{
+    display: block;
+}
+.menuLateral ul .itensNotas.mostra{
+    display: block;
+}
+.menuLateral ul .itensLojas.mostra{
+    display: block;
+}
+.menuLateral ul .itensContratos.mostra{
+    display: block;
+}
+.menuLateral ul .itensAtendimento.mostra{
+    display: block;
+}
+.menuLateral ul .itensAgenda.mostra{
+    display: block;
+}
+.menuLateral ul .itensFuncionarios.mostra{
+    display: block;
+}
+.menuLateral ul li a span{
+    font-size: 28px;
+    position: absolute;
+    padding-top: 5px;
+    left: 10px;
+}

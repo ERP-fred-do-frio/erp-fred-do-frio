@@ -1,0 +1,18 @@
+h1{
+    color: green;
+    font-size: 100px;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: hotpink;
+    height: 300px;
+}
+body{
+    background-image: url(img/back2.jpg);
+}
+img{
+
+}
+#pequena{
+    width: 100px;
+    height: 100px;
+}
