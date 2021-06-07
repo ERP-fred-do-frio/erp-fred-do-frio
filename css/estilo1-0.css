@@ -1,0 +1,372 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body{
+    background-color: rgb(0, 17, 255);
+}
+
+/*CABEÇALHO*/
+.cabecalho{
+    height: 55px;
+    padding-left: 65px;
+    padding-right: 20px; 
+    display: flex;
+    background-color: rgb(7, 135, 255);
+}
+/*USUÁRIO*/
+.user{
+    display: flex;
+    margin-left: 10px;
+}
+.user #log img{
+    border-radius: 50%;
+    margin-top: 8px;
+}
+.user #nome{
+    margin: 3px 10px;
+}
+.user #nome h1{
+    font-size: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+/* PESQUISA */
+#pesquisa{
+    margin-left: 200px;
+}
+#pesquisa [type="search"]{
+    height: 30px;
+    width: 300px;
+    margin-top: 10px;
+    border-radius: 30px 0px 0px 30px;
+    border-style: none;
+}
+#boto{
+    width: 40px;
+    height: 30px;
+    margin-top: 10px;
+    border-radius: 0px 30px 30px 0px;
+    background-color: #e0dd16;
+}
+/* BOTÕES DO CABEÇALHO */
+#btns{
+    margin: 8px 0px 0px 200px;
+    display: flex;
+    justify-content: space-between;
+}
+#btns .btn-cab{
+    margin-left: 20px;
+
+}
+
+/* SIDE MENU */
+.btnAbre{
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.btnAbre span{
+    font-size: 35px;
+}
+.btnFecha{
+    position: relative;
+    left: 20px;
+    top: 3px;
+    border: 1px solid white;
+    border-radius: 3px;
+    cursor: pointer;
+}
+.btnFecha:hover{
+    border: 1px solid red;
+}
+.menuLateral{
+    background-color: rgb(7, 135, 255);
+    width: 250px;
+    height: 100%;
+    left: -250px;
+    position: absolute;
+    transition: left 0.5s;
+}
+.menuLateral.mostra{
+    left: 0;
+}
+.menuLateral .titulo{
+    height: 55px;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    line-height: 45px;
+    font-size: 24px;
+    border-bottom: 2px solid rgb(255, 0, 0);
+}
+.menuLateral ul{
+    list-style: none;
+}
+.menuLateral ul li{
+    line-height: 40px;
+    border: 1px solid rgb(2, 160, 252);
+}
+.menuLateral ul li a{
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    padding-left: 40px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    box-sizing: border-box;
+    font-weight: bold;
+    display: block;
+}
+.menuLateral ul li a:hover{
+    background-color: rgb(231, 219, 219);
+    text-shadow: 3px 3px 5px black;
+    transition: 0.5s;
+}
+.menuLateral ul ul li a{
+    font-size: 16px;
+    font-weight: 300;
+    padding-left: 60px;
+    background-color: rgb(187, 184, 184);
+    color: rgb(2, 31, 58);
+}
+.menuLateral ul ul{
+    display: none;
+}
+.menuLateral ul .itensCadastro.mostra{
+    display: block;
+}
+.menuLateral ul .itensEstoque.mostra{
+    display: block;
+}
+.menuLateral ul .itensVendas.mostra{
+    display: block;
+}
+.menuLateral ul .itensFinanceiros.mostra{
+    display: block;
+}
+.menuLateral ul .itensRelatorios.mostra{
+    display: block;
+}
+.menuLateral ul .itensNotas.mostra{
+    display: block;
+}
+.menuLateral ul .itensLojas.mostra{
+    display: block;
+}
+.menuLateral ul .itensContratos.mostra{
+    display: block;
+}
+.menuLateral ul .itensAtendimento.mostra{
+    display: block;
+}
+.menuLateral ul .itensAgenda.mostra{
+    display: block;
+}
+.menuLateral ul .itensFuncionarios.mostra{
+    display: block;
+}
+.menuLateral ul li a span{
+    font-size: 28px;
+    position: absolute;
+    padding-top: 5px;
+    left: 10px;
+}
+
+/*FLEX-CONTAINER*/
+.tudo-flex{
+    display: flex;
+}
+
+/*CARDS*/
+.flex-container{
+    width: 195px;
+    height:100%;
+    margin: 20px 10px 20px 5px;
+    padding: 10px 0px 10px 0px;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: flex-start;
+    align-content: space-between;  
+}
+#menor{
+    height: 30px;
+    width: 190px;
+    padding: 5px 20px 20px 5px;
+    margin: 5px 0px 5px 5px;
+    color: white;
+    text-shadow: 3px 3px 5px black;
+    font-size: 10px;
+    text-align: center;
+    background-color: rgb(7, 135, 255);
+    border: 2px solid gray;
+    border-radius: 0px 20px 0px 20px;
+    transition: all 1s ease;
+}
+#menor:hover{
+    margin: 0px 5px 10px 0px;    
+    box-shadow: 3px 3px 5px black;
+    text-shadow: 0px 0px 5px rgb(86, 86, 236);
+    background-color: rgb(86, 86, 236);
+    transition: all 1s ease;
+}
+.card-unico{
+    height: 115px;
+    width: 190px;
+    padding: 5px 20px 20px 5px;
+    margin: 5px 0px 5px 5px;
+    color: white;
+    text-shadow: 5px 5px 5px black;
+    font-size: 20px;
+    background-color: rgb(0, 17, 255);
+    border: 2px solid gray;
+    border-radius: 0px 20px 0px 20px;
+    transition: all 1s ease;
+}
+.card-unico:hover{
+    margin: 0px 5px 10px 0px;
+    background-color: #169FE0;
+    text-shadow: 0px 0px 5px #169FE0;
+    border: 1px solid black;
+    box-shadow: 5px 5px 5px black;
+}
+.card-unico h1{
+    font-size: 25px;
+}
+
+/*GRAFICO 1*/
+.tudo-flex #test-1{
+    height: 560px;
+    width: 675px;
+    margin: 20px 10px 20px 5px;
+}
+.tudo-flex #test-1 #fluxo-de-caixa{
+    height: 500px;
+    width: 650px;
+    margin: 20px 10px 0px 5px;
+    border: 2px solid gray;
+    border-radius: 0px 20px 0px 0px;
+    background-color: honeydew;
+    transition: all 1s ease;
+    box-sizing: border-box;
+}
+.tudo-flex #test-1 #fluxo-de-caixa:hover{
+    margin: 10px 15px 10px 0px;
+    background-color: gray;
+    box-shadow: 5px 5px 5px black;
+    transition: all 1s ease;
+}
+.tudo-flex #test-1 .titulo-1{
+    height: 30px;
+    width: 650px;
+    margin: 5px 10px 20px 5px;
+    padding: 5px;
+    border-radius: 0px 0px 0px 20px;
+    box-sizing: border-box;
+    background-color: chartreuse;
+    text-align: center;
+    color: white;
+    text-shadow: 3px 3px 5px black;;
+    transition: all 1s ease;
+}
+.tudo-flex #test-1 .titulo-1:hover{
+    margin: 0px 15px 30px 0px;
+    text-shadow: 0px 0px 5px chartreuse;
+    background-color: chartreuse;
+    box-shadow: 5px 5px 5px black;
+    transition: all 1s ease;
+}
+
+/*GRAFICO 2*/
+.tudo-flex .outros{
+    height: 560px;
+    width: 360px;
+    margin: 20px 10px 20px 5px;
+    
+}
+.tudo-flex .outros #mes{
+    height: 30px;
+    width: 338px;
+    padding: 5px;
+    margin: 20px 10px 0px 5px;
+    border-radius: 0px 20px 0px 0px;
+    background-color: honeydew;
+    background-color: violet;
+    text-align: center;
+    color: white;
+    text-shadow: 3px 3px 5px black;
+    transition: all 1s ease;
+}
+.tudo-flex .outros #mes:hover{
+    margin: 10px 15px 10px 0px;
+    box-shadow: 5px 5px 5px black;
+    border: none;
+    transition: all 1s ease;
+}
+.tudo-flex .outros #calendario{
+    width: 338px;
+    height: 200px;
+    background-color: violet;
+    margin: 5px 10px 0px 5px;
+    transition: all 1s ease;
+}
+.tudo-flex .outros #calendario:hover{
+    margin: 0px 15px 10px 0px;
+    box-shadow: 5px 5px 5px black;
+    border: none;
+    transition: all 1s ease;
+}
+.tudo-flex .outros #trafego{
+    width: 338px;
+    height: 245px;
+    background-color: white;
+    margin: 15px 10px 0px 5px;
+    border-radius: 0px 20px 0px 0px;
+    transition: all 1s ease;    
+}
+.tudo-flex .outros #trafego:hover{
+    margin: 10px 15px 10px 0px;
+    box-shadow: 5px 5px 5px black;
+    border: none;
+    transition: all 1s ease;
+}
+.tudo-flex .outros #titulo-trafego{
+    height: 30px;
+    width: 338px;
+    margin: 5px 10px 0px 5px;
+    padding: 3px;
+    border: 1px dotted white;
+    border-radius: 0px 0px 0px 20px;
+    background-color: yellow;
+    text-align: center;
+    color: white;
+    text-shadow: 3px 3px 5px black;
+    transition: all 1s ease;
+}
+.tudo-flex .outros #titulo-trafego:hover{
+    margin: 0px 15px 10px 0px;
+    box-shadow: 5px 5px 5px black;
+    border: none;
+    text-shadow: none;
+    transition: all 1s ease;
+}
+
+/*BOTÕES*/
+.tudo-flex #botoes{
+    height: 540px;
+    width: 80px;
+    margin: 35px 10px 20px 5px;
+    border: 2px solid gray;
+    border-radius: 0px 20px 0px 20px;
+    background-color: rgb(7, 135, 255);
+}
+.tudo-flex #botoes .b1{
+    height: 40px;
+    width: 40px;
+    margin: 30px 15px;
+}
