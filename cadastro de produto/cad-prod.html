@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>PRODUTOS</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="estilo.css">
+        <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+        <script defer src="https://kit.fontawesome.com/3f3417947e.js"></script>
+    </head>
+    <body>
+        
+        <!---------------------------------------------------------------------->
+        <!--                          MENU LATERAL                            -->
+        <!---------------------------------------------------------------------->
+        <nav class="sidebar">
+            <div class="perfil">
+
+                <div class="logo">
+                     <img src="img/Logo.png" width="75px" height="75px">
+                </div>
+
+                <div class="usuario">
+                    <h1>Fred do Frio</h1>
+                    <a href="#">@Usuário</a>
+                </div>
+            </div>
+
+            <!---------------------------------------------------------------------->
+            <!--                               ICONES                             -->
+            <!---------------------------------------------------------------------->
+            <div class="icones">
+
+                <i class="fas fa-cog"></i>
+                <i class="far fa-question-circle"></i>
+                <i class="fas fa-bell"></i>
+            </div>
+
+            <!---------------------------------------------------------------------->
+            <!--                        CAMPO DE BUSCA                            -->
+            <!---------------------------------------------------------------------->
+            <div class="area-de-pesquisa">
+                <form class="pesquisa">
+                    <input type="search" id="barra" placeholder="Buscar">
+                    <i class="fas fa-search"></i>
+                </form>
+            </div>
+
+            <!---------------------------------------------------------------------->
+            <!--                          SUB-MENUS                               -->
+            <!---------------------------------------------------------------------->
+            <ul>                
+                <li><a href="#"><i class="fas fa-chart-line"></i>Dashboard</a></li>
+                <li>
+                    <a href="#" class="cad-btn"><i class="fas fa-atlas"></i>Cadastro
+                        <span class="fas fa-caret-down primeiro"></span>
+                    </a>
+                    <ul class="mostre-cad">
+                        <li><a href="#">Clientes</a></li>
+                        <li><a href="#">Fornecedores</a></li>
+                        <li><a href="#">Produtos</a></li>
+                        <li><a href="#">Serviços</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="estoque-btn"><i class="fas fa-cubes"></i>Estoque
+                        <span class="fas fa-caret-down segundo"></span>
+                    </a>
+                    <ul class="mostre-stock">
+                        <li><a href="#">Controle de Estoque</a></li>
+                        <li><a href="#">Cotação Online</a></li>
+                        <li><a href="#">Compras</a></li>
+                        <li><a href="#">Transferências</a></li>
+                        <li><a href="#">Etiquetas</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="vendas-btn"><i class="fas fa-cash-register"></i>Vendas
+                        <span class="fas fa-caret-down terceiro"></span>
+                    </a>
+                    <ul class="mostre-vendas">
+                        <li><a href="#">Orçamentos</a></li>
+                        <li><a href="#">Vendas</a></li>
+                        <li><a href="#">PDV</a></li>
+                        <li><a href="#">Ordens de Serviços</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="financeiro-btn"><i class="fas fa-money-bill-wave-alt"></i>Financeiro
+                        <span class="fas fa-caret-down quarto"></span>
+                    </a>
+                    <ul class="mostre-financeiro">
+                        <li><a href="#">Controle Financeiro</a></li>
+                        <li><a href="#">Contas a Pagar</a></li>
+                        <li><a href="#">Contas a Receber</a></li>
+                        <li><a href="#">Fluxo de Caixa</a></li>
+                        <li><a href="#">Conciliação Bancária</a></li>
+                        <li><a href="#">Emissão de Boletos</a></li>
+                        <li><a href="#">Carnê de Pagamento</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="relatorios-btn"><i class="fas fa-clipboard-list"></i>Relatórios
+                        <span class="fas fa-caret-down quinto"></span>
+                    </a>
+                    <ul class="mostre-relatorios">
+                        <li><a href="#">Relatórios</a></li>
+                        <li><a href="#">Cadastro</a></li>
+                        <li><a href="#">Financeiro</a></li>
+                        <li><a href="#">Vendas</a></li>
+                        <li><a href="#">Estoque</a></li>
+                        <li><a href="#">Locações</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="notas-btn"><i class="fas fa-receipt"></i>Notas Fiscais
+                        <span class="fas fa-caret-down sexto"></span>
+                    </a>
+                    <ul class="mostre-notas">
+                        <li><a href="#">Emissão de NF-e</a></li>
+                        <li><a href="#">Emissão de NFS-e</a></li>
+                        <li><a href="#">Emissão de NFC-e</a></li>
+                        <li><a href="#">Importar XML</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="lojas-btn"><i class="fas fa-store"></i>Lojas
+                        <span class="fas fa-caret-down setimo"></span>
+                    </a>
+                    <ul class="mostre-lojas">
+                        <li><a href="#">Multiempresas</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="contratos-btn"><i class="fas fa-file-signature"></i>Contratos
+                        <span class="fas fa-caret-down oitavo"></span>
+                    </a>
+                    <ul class="mostre-contratos">
+                        <li><a href="#">Gestão de Contratos</a></li>
+                        <li><a href="#">Locações</a></li>
+                        <li><a href="#">Serviços</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="atendimentos-btn"><i class="fas fa-headset"></i>Atendimentos
+                        <span class="fas fa-caret-down nono"></span>
+                    </a>
+                    <ul class="mostre-atendimentos">
+                        <li><a href="#">Chamadas</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="agenda-btn"><i class="far fa-calendar-check"></i>Agenda
+                        <span class="fas fa-caret-down decimo"></span>
+                    </a>
+                    <ul class="mostre-agenda">
+                        <li><a href="https://workspace.google.com/intl/pt-BR/products/calendar/?utm_source=google&utm_medium=cpc&utm_campaign=latam-BR-all-pt-dr-bkws-all-all-trial-e-dr-1009897-LUAC0011905&utm_content=text-ad-none-any-DEV_c-CRE_477535132992-ADGP_Hybrid%20%7C%20BKWS%20-%20MIX%20%7C%20Txt%20~%20Calendar_Agenda-KWID_43700057676888723-kwd-7375707350&utm_term=KW_google%20agenda-ST_google%20agenda&gclid=CjwKCAjw-qeFBhAsEiwA2G7Nl1cfANCMQ9NxU3yBq0Jxh9jmwZnC8tjWpm4pZBhELI09eTEIVnCMIBoCdKAQAvD_BwE&gclsrc=aw.ds" target="_blank">Agenda Online</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="funcionarios-btn"><i class="fas fa-id-badge"></i>Funcionários
+                        <span class="fas fa-caret-down decimo-primeiro"></span>
+                    </a>
+                    <ul class="mostre-funcionarios">
+                        <li><a href="#">Perfil de Acesso</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav> 
+
+        <script>
+            $('.cad-btn').click(function(){
+              $('nav ul .mostre-cad').toggleClass("show");
+              $('nav ul .primeiro').toggleClass("rotate");
+            });
+            $('.estoque-btn').click(function(){
+              $('nav ul .mostre-stock').toggleClass("show1");
+              $('nav ul .segundo').toggleClass("rotate");
+            });
+            $('.vendas-btn').click(function(){
+              $('nav ul .mostre-vendas').toggleClass("show2");
+              $('nav ul .terceiro').toggleClass("rotate");
+            });
+            $('.financeiro-btn').click(function(){
+              $('nav ul .mostre-financeiro').toggleClass("show3");
+              $('nav ul .quarto').toggleClass("rotate");
+            });
+            $('.relatorios-btn').click(function(){
+              $('nav ul .mostre-relatorios').toggleClass("show4");
+              $('nav ul .quinto').toggleClass("rotate");
+            });
+            $('.notas-btn').click(function(){
+              $('nav ul .mostre-notas').toggleClass("show5");
+              $('nav ul .sexto').toggleClass("rotate");
+            });
+            $('.lojas-btn').click(function(){
+              $('nav ul .mostre-lojas').toggleClass("show6");
+              $('nav ul .setimo').toggleClass("rotate");
+            });
+            $('.contratos-btn').click(function(){
+              $('nav ul .mostre-contratos').toggleClass("show7");
+              $('nav ul .oitavo').toggleClass("rotate");
+            });
+            $('.atendimentos-btn').click(function(){
+              $('nav ul .mostre-atendimentos').toggleClass("show8");
+              $('nav ul .nono').toggleClass("rotate");
+            });
+            $('.agenda-btn').click(function(){
+              $('nav ul .mostre-agenda').toggleClass("show9");
+              $('nav ul .decimo').toggleClass("rotate");
+            });
+            $('.funcionarios-btn').click(function(){
+              $('nav ul .mostre-funcionarios').toggleClass("show10");
+              $('nav ul .decimo-primeiro').toggleClass("rotate");
+            });
+            $('nav ul li').click(function(){
+                $(this).addClass("active").siblings().removeClass("active");
+            });
+        </script>
+
+        <!----------------------------------------------------------------------
+        -------------------------- PÁGINA -------------------------------------- ------------------------------------------------------------------------>
+        <!-- PÁGINA -->
+        <div id="pagina">
+            <!-- CABEÇALHO DA PÁGINA -->
+            <div id="cabecalho">
+                <h1><img src="Symbian/Windows-Application.png" height="30px" width="30px"> Cadastro de Produtos</h1>
+            </div>
+
+            <div class="containers" id="pesquisa">
+                <a href="listar-produtosV4.html" target="_blank"><button><img src="Symbian/Clipboard-Check-2.png" height="25px" width="25px"> Lista de produtos</button></a>
+            </div>
+
+            <!-- CONTAINER 1 -->
+            <form action="">
+                <div class="containers" id="container-1">
+                    <div class="cab-titulo">
+                        <h2>Dados</h2>
+                    </div>
+
+                    <div class="flex">
+                        <div>
+                            <label for="">Nome do produto</label>
+                            <input type="text">
+                        </div>
+
+                        <div>
+                            <label for="">Código interno</label>
+                            <input type="text" name="" id="">
+                        </div>
+
+                        <div>
+                            <label for="">Código de barra</label>
+                            <input type="text" name="" id="">
+                        </div>
+                            
+                        <div>
+                            <label for="">Grupo do produto</label>
+                            <input type="text" name="" id="">
+                        </div>
+                            
+                        <div>
+                            <label for="">Movimenta estoque</label>
+                            <select name="" class="op">
+                                <option value="">Sim</option>
+                                <option value="">Não</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label for="">Habilita nota fiscal?</label>
+                            <select name="" class="op">
+                                <option value="">Sim</option>
+                                <option value="">Não</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label for="">Possui variações?</label>
+                            <select name="variacao" class="op">
+                                <option value="sim">Sim</option>
+                                <option value="nao">Não</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label for="">Possui composição?</label>
+                            <select name="" class="op">
+                                <option value="">Sim</option>
+                                <option value="">Não</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CONTAINER 2 -->
+                <div class="containers" id="container-2">
+                    <div class="cab-titulo">
+                        <h2>Detalhes</h2>
+                    </div>
+
+                    <div>
+                        <fieldset class="flex">
+                            <div>
+                                <label for="">Peso (kg)</label>
+                                <input type="text" name="peso">
+                            </div>
+                            <div>
+                                <label for="">Largura (m)</label>
+                                <input type="text" name="largura">
+                            </div>
+                            <div>
+                                <label for="">Altura (m)</label>
+                                <input type="text" name="altura">
+                            </div>
+                            <div>
+                                <label for="">Comprimento (m)</label>
+                                <input type="text" name="comprimento">
+                            </div>
+                        </fieldset>
+
+                        <fieldset class="flex">
+                            <div>
+                                <label for="">Status do produto</label>
+                                <select name="status">
+                                    <option value="ativo">Ativo</option>
+                                    <option value="inativo">Inativo</option>
+                                </select>
+                            </div>
+        
+                            <div>
+                                <label for="">Vendido separadamente</label>
+                                <select name="status">
+                                    <option value="sim">Sim</option>
+                                    <option value="nao">Não</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="">Comercializado no PDV</label>
+                                <select name="status">
+                                    <option value="sim">Sim</option>
+                                    <option value="nao">Não</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="">Comissão (%)</label>
+                                <input type="text" name="comissao">
+                            </div>
+                        </fieldset>
+                        <fieldset class="flex">
+                            <div>
+                                <label for="">Descriçao</label>
+                                <textarea name="descricao" cols="30" rows="10"></textarea>
+                            </div>
+                        </fieldset>
+                    </div>
+                </div>
+
+                <!-- CONTAINER 3 -->
+                <div class="containers" id="container-3">
+                    <div class="cab-titulo">
+                        <h2>Valores</h2>
+                    </div>
+
+                    <div class="flex">
+                        <div>
+                            <label for="">Valor de custo</label>
+                            <input type="text" name="custo">
+                        </div>
+
+                        <div>
+                            <label for="">Despesas acessórias</label>
+                            <input type="text" name="despesas-acessorias">
+                        </div>
+                            
+                        <div>
+                            <label for="">Outras despesas</label>
+                            <input type="text" name="outras-despesas">
+                        </div>
+                           
+                        <div>
+                            <label for="">Custo final</label>
+                            <input type="text" name="custo-final">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CONTAINER 4 -->
+                <div class="containers" id="container-4">
+                    <div class="cab-titulo">
+                        <h2>Estoque</h2>
+                    </div>    
+                    <div class="flex">
+                        <div>
+                            <label for="">Estoque mínimo</label>
+                            <input type="text" name="estoque-minimo">
+                        </div>            
+                        <div>
+                            <label for="">Estoque máximo</label>
+                            <input type="text" name="estoque-maximo">
+                        </div>
+                        <div>
+                            <label for="">Quantidade atual</label>
+                            <input type="text" name="quantidade-atual">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CONTAINER 5 -->
+                <div class="containers" id="container-5">
+                    <div class="cab-titulo">
+                        <h2>Galeria</h2>
+                    </div>
+
+                    <div class="flex">
+                        <label> Fotos do produto </label>
+                        <input type="file" accept="image/*">
+                    </div>
+                </div>
+
+                <!-- CONTAINER 6 -->
+                <div class="containers" id="container-6">
+                    <div class="cab-titulo">
+                        <h2>Fiscal</h2>
+                    </div>
+                    <div class="flex">
+                        <div>
+                            <label for="">NCM-Q</label>
+                            <input type="text" name="ncm-q">
+                        </div>
+                        <div>
+                            <label for="">CEST</label>
+                            <input type="text" name="cest">
+                        </div>
+                        <div>
+                            <label for="">Origem</label>
+                            <select name="origem">
+                                <option value="">0 - Nacional, exceto as indicadas nos códigos de 3 a 5</option>
+                                <option value="">1 - Estrangeira - importação direta exceto a indicada no código 6</option>
+                                <option value="">2 - Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7</option>
+                                <option value="">3 - Nacional, Mercadoria ou bem com conteúdo de importação superior a 40%</option>
+                                <option value="">4 - Nacional, em conformidade com processsos básicos que tratam a legisl. dos Ajustes</option>
+                                <option value="">5 - Nacional, Mercadoria ou bem com conteúdo de importação inferior a 40%</option>
+                                <option value="">6 - Estrangeira - Importação direta, sem similar nacional, constante em lista da CAMEX</option>
+                                <option value="">7 - Estrangeira - Adquirida no mercado interno, sem similar nacional, constante em lista da CAMEX</option>
+                                <option value="">8 - Nacional, Mercadoria ou bem com conteúdo de importação superior a 70%</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="">Peso liquido</label>
+                            <input type="text" name="peso-liquido">
+                        </div>
+                        <div>
+                            <label for="">Peso bruto</label>
+                            <input type="text" name="peso-bruto">
+                        </div>
+                        <div>
+                            <label for="">Número FCI</label>
+                            <input type="text" name="numero-fci">
+                        </div>
+                        <div>
+                            <label for="">%Vr.aprox. tribut.</label>
+                            <input type="text" name="%vr-aprox-tribut">
+                        </div>
+                    </div>
+
+                    <fieldset class="flex">
+                        <legend>PIS / CONFINS</legend>
+
+                        <div>
+                            <label for="">Valor fixo PIS</label>
+                            <input type="text" name="valor-fixo-pis">
+                        </div>
+
+                        <div>
+                            <label for="">Valor fixo PIS ST</label>
+                            <input type="text" name="valor-fixo-pis-st">
+                        </div>
+
+                        <div>
+                            <label for="">Valor fixo CONFINS</label>
+                            <input type="text" name="valor-fixo-confins">
+                        </div>
+
+                        <div>
+                            <label for="">Valor fixo CONFINS ST</label>
+                            <input type="text" name="valor-fixo-confins-st">
+                        </div>
+                    </fieldset>
+                </div>
+
+                <!-- BOTÃO -->
+                <div id="div-salvar">
+                    <button>Salvar</button>
+                </div>
+            </form>
+        </div>
+    </body>
+</html>
