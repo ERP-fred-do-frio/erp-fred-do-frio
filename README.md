@@ -11,9 +11,8 @@ https://literate-wine.surge.sh/
 
 - Dashboard
 
-![image](https://user-images.githubusercontent.com/68444349/125092524-cee1d900-e0a7-11eb-8190-825c3b8d61e0.png)
+![image](https://user-images.githubusercontent.com/68444349/126874687-2c0aee77-d312-45fb-bc4d-7604a84fbec0.png)
 
-![image](https://user-images.githubusercontent.com/68444349/125092591-df924f00-e0a7-11eb-9901-69e542fa81cb.png)
 
 -Link do Dashboard
 http://amazing-recess.surge.sh/
