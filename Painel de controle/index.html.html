@@ -5,39 +5,48 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>Controle de Acesso</title>
-
 	<link rel="stylesheet" href="css/stylesheet.css">
 </head>
-<body class="back2">
+<body>
+
+	<!-------------------------------------------------------------------------
+	---                                 CARD                                ---
+	-------------------------------------------------------------------------->
 	<form class="form" action="">
-		<div class="card">
-			<div class="card-top">
-				<img class="imglogin" src="css/imagens/Logo.png" alt="">
-				<h2 class="title">Painel de Controle</h2>
-				<p>Gerencie seu Negócio</p>
+		<div id="card">
+
+			<div id="card-top">
+				<!--LOGO-->
+				<img id="imglogin" src="css/imagens/Logo.png" alt="logo-fdf">
+				<!--SALUTATION-->
+				<h1 id="salutation">OLÁ USUÁRIO</h1>
+				<p id="welcome">Seja bem vindo!</p>
 			</div>
 
+			<!--INPUTS-->
 			<div class="card-group">
-				<label class="fnt">Email</label>
+				<label>Email</label>
 				<input type="text" name="email" placeholder="Digite seu email">
 			</div>
 			<br>
 			<div class="card-group">
-				<label class="fnt">Senha</label>
+				<label>Senha</label>
 				<input type="password" name="senha" placeholder="Digite sua senha">
 			</div>
 			<br>
-			<div class="card-group">
-				<label><input type="checkbox"> Lembre-me</label>
+			<div id="checkbox">
+				<label><input type="checkbox" checked> Lembre-me</label>
             </div>
 			<br>
 			<div class="card-group btn">
 				<button type="submit">ACESSAR</button>
             </div>
+
+			<!--LINKS-->
 			<br>
-				<a href="..."> Esqueci minha senha</a>
+			<a href="..."> Esqueci minha senha</a>
 			<br><br>
-				<a href="..."> Cadastre-se</a>
+			<a href="..."> Cadastre-se Grátis</a>
             			
 		</div>
 	</form>
