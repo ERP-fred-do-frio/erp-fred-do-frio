@@ -1,171 +1,382 @@
 *{
     margin: 0;
     padding: 0;
+    user-select: none;
     box-sizing: border-box;
     font-family: sans-serif;
 }
 body{
-    background-image: url(../img/back2.jpg);
+    display: flex;
+    background-color: darkblue;
 }
-.cabecalho{
-    height: 55px;
-    padding-left: 65px;
-    padding-right: 20px; 
-    background-color: rgb(7, 135, 255);
-}
-.logo{
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
+
+/* ============================================================================================================= 
+=================================== MENU LATERAL =============================================================== 
+================================================================================================================*/
+.sidebar{
     position: absolute;
-    top: 10px;
-    border-bottom: 10px;
-    left: 97%;
-    float: right;
-    background: url(../img/Logo.png);
-    font-size: 0;
-}
-.cabecalho form{
-    width: 30%;
-    float: right;
-}
-.cabecalho input[type="text"]{
-    background-color: rgb(131, 131, 248);
-    border: none;
-    border-bottom: 1px solid red;
-    width: 250px;
-    height: 30px;
-    position: absolute;
-    top: 10px;
-    right: 89px;
-    float: left;
-    padding: 15px 10px;
-}
-.cabecalho button{
-    width: 40px;
-    height: 30px;
-    position: absolute;
-    right: 50px;
-    top: 10px;
-    float: right;
-    padding: 15px 10px;
-    background-color: yellowgreen;
-    border: none;
-    border-bottom: 1px solid red;
-    color: white;
-    cursor: pointer;
-}
-.btnAbre{
-    position: absolute;
-    top: 10px;
-    left: 20px;
-    color: white;
-    border-radius: 5px;
-    cursor: pointer;
-}
-.btnAbre span{
-    font-size: 35px;
-}
-.btnFecha{
-    position: relative;
-    left: 20px;
-    top: 3px;
-    border: 1px solid white;
-    border-radius: 3px;
-    cursor: pointer;
-}
-.btnFecha:hover{
-    border: 1px solid red;
-}
-.menuLateral{
-    background-color: rgb(7, 135, 255);
-    width: 250px;
+    width: 220px;
     height: 100%;
-    left: -250px;
-    position: absolute;
-    transition: left 0.5s;
+    left: 0px;
 }
-.menuLateral.mostra{
-    left: 0;
+
+/* ========================================================================================================== 
+============================================== CAMPO DE USUARIO =============================================
+============================================================================================================= */
+.perfil{
+    display: flex;
+    background-color: darkblue;
 }
-.menuLateral .titulo{
-    height: 55px;
+.perfil .logo img{
+    border-radius: 50%;
+    padding: 5px;
+}
+.perfil .usuario{
+    padding: 5px;
+    background-color: darkblue;
+    border: none;
+}
+.sidebar .usuario h1{
+    padding: 10px 0px;
     color: white;
-    text-align: center;
-    font-weight: bold;
-    line-height: 45px;
-    font-size: 24px;
-    border-bottom: 2px solid rgb(255, 0, 0);
+    text-shadow: 3px 3px 5px black;
+    font-size: 20px;
 }
-.menuLateral ul{
+.sidebar .usuario a{
+    text-decoration: none;
+    font-size: 15px;
+    color: darkgrey;
+    text-shadow: 3px 3px 5px black;
+    padding-left: 10px;
+}
+
+/* ==================================================================================================== 
+=================================================== ICONES ============================================ 
+======================================================================================================= */
+.icones{
+    display: flex;
+    justify-content: space-around;
+    color: white;
+    font-size: 18px;
+    text-shadow: 3px 3px 5px black;
+    margin-top: 20px;
+}
+
+/*========================================================================================================
+==================================== CAMPO DE BUSCA ====================================================== 
+========================================================================================================== */
+.barra-de-pesquisa .pesquisa{
+    margin-left: 10px;
+}
+.area-de-pesquisa .pesquisa{
+    border: 1px solid white;
+    height: 35px;
+    margin: 30px 15px;
+}
+#barra{
+    height: 25px;
+    width: 150px;
+    margin: 5px;
+    color: white;
+    border-style: none;
+    background-color: darkblue;
+}
+#barra::placeholder{
+    padding-left: 10px;
+    color: white;
+}
+.pesquisa i{
+    color: white;
+    font-size: 15px;
+}
+
+/* ========================================================================================================= 
+================================================== SUB-MENUS =============================================== 
+============================================================================================================ */
+nav ul{
+    background-color: darkblue;
+    height: 100%;
+    width: 100%;
     list-style: none;
 }
-.menuLateral ul li{
-    line-height: 40px;
-    border: 1px solid rgb(2, 160, 252);
+nav ul li{
+    line-height: 45px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
 }
-.menuLateral ul li a{
+nav ul li:last-child{
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+nav ul li a{
+    position: relative;
     color: white;
-    text-decoration: none;
-    font-size: 20px;
-    padding-left: 40px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    box-sizing: border-box;
-    font-weight: bold;
-    display: block;
-}
-.menuLateral ul li a:hover{
-    background-color: rgb(141, 128, 128);
     text-shadow: 3px 3px 5px black;
-    transition: 0.5s;
-}
-.menuLateral ul ul li a{
+    text-decoration: none;
     font-size: 16px;
-    font-weight: 300;
-    padding-left: 60px;
-    background-color: rgb(187, 184, 184);
-    color: rgb(2, 31, 58);
+    padding-left: 20px;
+    font-weight: 500;
+    display: block;
+    width: 100%;
+    border-left: 3px solid transparent;
 }
-.menuLateral ul ul{
+nav ul li.active a{
+    color:  lime;
+    background: #1e1e1e;
+    border-left-color: lime;
+}
+nav ul ul{
+    position: static;
     display: none;
 }
-.menuLateral ul .itensCadastro.mostra{
+nav ul .mostre-cad.show{
     display: block;
 }
-.menuLateral ul .itensEstoque.mostra{
+nav ul .mostre-stock.show1{
     display: block;
 }
-.menuLateral ul .itensVendas.mostra{
+nav ul .mostre-vendas.show2{
     display: block;
 }
-.menuLateral ul .itensFinanceiros.mostra{
+nav ul .mostre-financeiro.show3{
     display: block;
 }
-.menuLateral ul .itensRelatorios.mostra{
+nav ul .mostre-relatorios.show4{
     display: block;
 }
-.menuLateral ul .itensNotas.mostra{
+nav ul .mostre-notas.show5{
     display: block;
 }
-.menuLateral ul .itensLojas.mostra{
+nav ul .mostre-lojas.show6{
     display: block;
 }
-.menuLateral ul .itensContratos.mostra{
+nav ul .mostre-contratos.show7{
     display: block;
 }
-.menuLateral ul .itensAtendimento.mostra{
+nav ul .mostre-atendimentos.show8{
     display: block;
 }
-.menuLateral ul .itensAgenda.mostra{
+nav ul .mostre-agenda.show9{
     display: block;
 }
-.menuLateral ul .itensFuncionarios.mostra{
+nav ul .mostre-funcionarios.show10{
     display: block;
 }
-.menuLateral ul li a span{
-    font-size: 28px;
+nav ul ul li{
+    line-height: 42px;
+    border-bottom: none;
+}
+nav ul ul li a{
+    font-size: 17px;
+    color: #e6e6e6;
+    padding-left: 45px;
+}
+nav ul li.active ul li a{
+    color:  #e6e6e6;
+    background: #1e1e1e;
+    border-left-color: lime;
+}
+nav ul ul li a:hover{
+    color: lime!important;
+    background-color: #1e1e1e!important;
+}
+nav ul li a span{
     position: absolute;
-    padding-top: 5px;
-    left: 10px;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    font-size: 22px;
+    transition: transform 0.4s;
+}
+nav ul li a span.rotate{
+    transform: translateY(-50%) rotate(-180deg); 
+}
+nav ul li a i{
+    padding-right: 25px;
+    text-shadow: 3px 3px 5px black;
+    font-size: x-large;
+}
+
+/* =========================================================================================================== 
+======================================================== PÁGINA  =========================================       
+============================================================================================================== */
+#pagina{
+    background-color: darkblue;
+    width: 82%;
+    height: 100%;
+    margin-left: 220px;
+    border-radius: 30px;
+    box-sizing: border-box;
+}
+
+#tittle{
+    color: darkgray;
+    padding-left: 25px
+}
+
+/*FLEX-CONTAINER*/
+#tudo-flex{
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    flex-flow: wrap;
+}
+/*CARDS*/
+.flex-container{
+    height:100%;
+    padding: 10px 0px 10px 0px;
+}
+#menor{
+    height: 30px;
+    width: 170px;
+    padding: 5px 20px 20px 5px;
+    margin: 5px 0px 5px 5px;
+    color: white;
+    text-shadow: 3px 3px 5px black;
+    font-size: 10px;
+    text-align: center;
+    background-color: rgb(7, 135, 255);
+    border: 2px solid gray;
+    border-radius: 0px 20px 0px 20px;
+    transition: all 1s ease;
+}
+#menor:hover{
+    margin: 0px 5px 10px 0px;    
+    box-shadow: 3px 3px 5px black;
+    text-shadow: 0px 0px 5px rgb(86, 86, 236);
+    background-color: rgb(86, 86, 236);
+    transition: all 1s ease;
+}
+.card-unico{
+    height: 115px;
+    width: 170px;
+    padding: 5px 20px 20px 5px;
+    margin: 15px 5px;
+    color: white;
+    text-shadow: 5px 5px 5px black;
+    font-size: 20px;
+    background-color: rgb(0, 17, 255);
+    border: 2px solid gray;
+    border-radius: 0px 20px 0px 20px;
+    transition: all 1s ease;
+}
+.card-unico:hover{
+    margin: 0px 5px 10px 0px;
+    background-color: #169FE0;
+    text-shadow: 0px 0px 5px #169FE0;
+    border: 1px solid black;
+    box-shadow: 5px 5px 5px black;
+}
+.card-unico h1{
+    font-size: 25px;
+}
+
+/*GRAFICO 1*/
+#test-1{
+    height: 100%;
+    margin: 10px 5px;
+    padding: 10px;
+}
+#fluxo-de-caixa{
+    height: 500px;
+    width: 500px;
+    margin: 5px 10px 0px 5px;
+    border: 2px solid gray;
+    border-radius: 0px 20px 0px 0px;
+    background-color: honeydew;
+    transition: all 1s ease;
+    box-sizing: border-box;
+}
+#fluxo-de-caixa:hover{
+    margin: 10px 15px 10px 0px;
+    background-color: gray;
+    box-shadow: 5px 5px 5px black;
+    transition: all 1s ease;
+}
+.titulo-1{
+    height: 30px;
+    width: 500px;
+    padding: 5px;
+    margin: 5px 10px 0px 5px;
+    border-radius: 0px 0px 0px 20px;
+    box-sizing: border-box;
+    background-color: chartreuse;
+    text-align: center;
+    color: white;
+    text-shadow: 3px 3px 5px black;;
+    transition: all 1s ease;
+}
+.titulo-1:hover{
+    margin: 0px 15px 30px 0px;
+    text-shadow: 0px 0px 5px chartreuse;
+    background-color: chartreuse;
+    box-shadow: 5px 5px 5px black;
+    transition: all 1s ease;
+}
+
+/*GRAFICO 2*/
+#outros{
+    height: 560px;
+    width: 300px;
+    margin-left: 5px;
+}
+#mes{
+    height: 30px;
+    padding: 5px;
+    margin: 15px 10px 0px 5px;
+    border-radius: 0px 20px 0px 0px;
+    background-color: honeydew;
+    background-color: violet;
+    text-align: center;
+    color: white;
+    text-shadow: 3px 3px 5px black;
+    transition: all 1s ease;
+}
+#mes:hover{
+    margin: 10px 15px 10px 0px;
+    box-shadow: 5px 5px 5px black;
+    border: none;
+    transition: all 1s ease;
+}
+#calendario{
+    height: 200px;
+    margin: 5px 10px 0px 5px;
+    background-color: violet;
+    transition: all 1s ease;
+}
+#calendario:hover{
+    margin: 0px 15px 10px 0px;
+    box-shadow: 5px 5px 5px black;
+    border: none;
+    transition: all 1s ease;
+}
+#trafego{
+    height: 245px;
+    background-color: white;
+    margin: 15px 10px 0px 5px;
+    border-radius: 0px 20px 0px 0px;
+    transition: all 1s ease;    
+}
+#trafego:hover{
+    margin: 10px 15px 10px 0px;
+    box-shadow: 5px 5px 5px black;
+    border: none;
+    transition: all 1s ease;
+}
+#titulo-trafego{
+    height: 30px;
+    margin: 5px 10px 0px 5px;
+    padding: 3px;
+    border: 1px dotted white;
+    border-radius: 0px 0px 0px 20px;
+    background-color: yellow;
+    text-align: center;
+    color: white;
+    text-shadow: 3px 3px 5px black;
+    transition: all 1s ease;
+}
+#titulo-trafego:hover{
+    margin: 0px 15px 10px 0px;
+    box-shadow: 5px 5px 5px black;
+    border: none;
+    text-shadow: none;
+    transition: all 1s ease;
 }
